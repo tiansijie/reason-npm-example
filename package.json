@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "bs-platform": "^1.5.0",
+    "reason-js": "0.3.0",
+    "imperial-metric": "^1.2.1"
+  },
+  "scripts": {
+    "build": "bsb -w"
+  },
+  "name": "reason-npm"
+}

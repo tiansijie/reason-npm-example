@@ -1,0 +1,5 @@
+{
+  "name" : "reason-npm",
+  "bs-dependencies": ["reason-js"],
+  "sources": { "dir": "src" }
+}
