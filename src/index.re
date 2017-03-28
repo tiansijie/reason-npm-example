@@ -10,7 +10,6 @@ type option =
 
 let inch = Unit "inch";
 let cm = Unit "cm";
-
 let getUnit = fun (Unit u) => u;
 
-Js.log (((imperialMetric(1))##from(getUnit inch))##_to(getUnit cm));
+Js.log (((imperialMetric 1)##from (getUnit inch))##_to (getUnit cm));
