@@ -7,5 +7,5 @@
     "build": "bsb",
     "watch": "bsb -w"
   },
-  "name": "reason-npm"
+  "name": "reason-npm-example"
 }
