@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "bs-platform": "^1.6.0",
-    "imperial-metric": "^1.2.1"
+    "imperial-metric": "^1.2.1",
+    "pixel-compare": "^3.0.0"
   },
   "scripts": {
     "build": "bsb",
