@@ -1,11 +1,40 @@
-external imperialMetric: int => 'a = "imperial-metric" [@@bs.module];
+type imType;
+type fromType;
+external imperialMetric: float => imType = "imperial-metric" [@@bs.module];
+external from :
+  [
+    | `inch
+    | `foot
+    | `mm
+    | `cm
+    | `m
+    | `km
+    | `sqrt_m
+    | `sqrt_cm
+    | `sqrt_mm
+    | `sqrt_km
+    | `sqrt_inch
+    | `sqrt_foot
+  ]
+  [@bs.string] => fromType =  "" [@@bs.send.pipe : imType];
 
-type option =
-  | Unit string;
+external _to :
+  [
+    | `inch
+    | `foot
+    | `mm
+    | `cm
+    | `m
+    | `km
+    | `sqrt_m
+    | `sqrt_cm
+    | `sqrt_mm
+    | `sqrt_km
+    | `sqrt_inch
+    | `sqrt_foot
+  ]
+  [@bs.string] => float = "to" [@@bs.send.pipe : fromType];
 
-let inch = Unit "inch";
-let cm = Unit "cm";
-let unit = fun (Unit u) => u;
+let result = imperialMetric 1. |> from `km |> _to `inch;
 
-let result = ((imperialMetric 1)##from (unit inch))##_to (unit cm);
 Js.log result;
